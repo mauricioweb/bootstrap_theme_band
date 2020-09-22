@@ -9,6 +9,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+        body {
+            font: 400 15px/1.8 Lato, sans-serif;
+            color: #777;
+        }
+
+        /* Overwrite default styles of h3 and h4 */
+        h3,
+        h4 {
+            margin: 10px 0 30px 0;
+            letter-spacing: 10px;
+            font-size: 20px;
+            color: #111;
+        }
+
+        /* Remove rounded borders on input fields */
+        .form-control {
+            border-radius: 0;
+        }
+
+        /* Disable the ability to resize textareas */
+        textarea {
+            resize: none;
+        }
+
         .container {
             padding: 80px 120px;
         }
@@ -112,6 +136,7 @@
             font-size: 11px !important;
             letter-spacing: 4px;
             opacity: 0.9;
+            font-family: Montserrat, sans-serif;
         }
 
         /* Add a gray color to all navbar links */
@@ -249,7 +274,7 @@
         </a>
     </div>
     <!-- Container (The Band Section) -->
-    <div id="band" class="container">
+    <div id="band" class="container text-center">
         <h3>A BANDA</h3>
         <p>Nós amamos musica!</p>
         <p>Criamos um site de banda fictício. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -266,7 +291,7 @@
             <div class="col-sm-4">
                 <p class="text-center"><strong>Name</strong></p><br>
                 <a href="#demo" data-toggle="collapse">
-                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name">
+                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
                 </a>
                 <div id="demo" class="collapse">
                     <p>Guitarrista e vocalista principal</p>
@@ -277,7 +302,7 @@
             <div class="col-sm-4">
                 <p class="text-center"><strong>Name</strong></p><br>
                 <a href="#demo2" data-toggle="collapse">
-                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name">
+                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
                 </a>
                 <div id="demo2" class="collapse">
                     <p>Baterista</p>
@@ -288,7 +313,7 @@
             <div class="col-sm-4">
                 <p class="text-center"><strong>Name</strong></p><br>
                 <a href="#demo3" data-toggle="collapse">
-                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name">
+                    <img src="imagem/bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
                 </a>
                 <div id="demo3" class="collapse">
                     <p>Baixista</p>
@@ -339,9 +364,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Used to open the Modal -->
-    <button class="btn" data-toggle="modal" data-target="#myModal">Comprar bilhetes</button>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
