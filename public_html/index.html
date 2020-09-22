@@ -44,6 +44,46 @@
                 /* Hide the carousel text when the screen is less than 600 pixels wide */
             }
         }
+
+        /* Remove rounded borders from list */
+        .list-group-item:first-child {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .list-group-item:last-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        /* Remove border and add padding to thumbnails */
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+        /* Black buttons with extra padding and without rounded borders */
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f1f1f1;
+            border-radius: 0;
+            transition: .2s;
+        }
+
+        /* On hover, the color of .btn will transition to white with black text */
+        .btn:hover,
+        .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
     </style>
 </head>
 
@@ -147,13 +187,41 @@
     <div class="bg-1">
         <div class="container">
             <h3 class="text-center">DATAS DA TURNÊ</h3>
-            <p class="text-center">Lorem ipsum vamos tocar algumas músicas para você.<br> Lembre-se de reservar seus ingressos!</p>
+            <p class="text-center">Lorem ipsum vamos tocar algumas músicas para você.<br> Lembre-se de reservar seus
+                ingressos!</p>
 
             <ul class="list-group">
-                <li class="list-group-item">Setembro Esgotado!</li>
-                <li class="list-group-item">Outubro Esgotado!</li>
-                <li class="list-group-item">3 de novembro</li>
+                <li class="list-group-item">Setembro <span class="label label-danger"> Esgotado!</span></li>
+                <li class="list-group-item">Outubro <span class="label label-danger"> Esgotado!</span></li>
+                <li class="list-group-item">Novembro <span class="badge"> 3 </span></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="imagem/paris.jpg" alt="Paris" width="400" height="300">
+                <p><strong>Paris</strong></p>
+                <p>Sexta-feira, 27 de novembro de 2015</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal">Comprar bilhetes</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="imagem/newyork.jpg" alt="New York" width="400" height="300">
+                <p><strong>Nova York</strong></p>
+                <p>Sábado, 28 de novembro de 2015</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal">Comprar bilhetes</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="imagem/sanfran.jpg" alt="San Francisco" width="400" height="300">
+                <p><strong>São Francisco</strong></p>
+                <p>Domingo, 29 de novembro de 2015</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal">Comprar bilhetes</button>
+            </div>
         </div>
     </div>
 
