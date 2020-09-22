@@ -103,10 +103,91 @@
         .nav-tabs li a {
             color: #777;
         }
+
+        /* Add a dark background color with a little bit see-through */
+        .navbar {
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+            opacity: 0.9;
+        }
+
+        /* Add a gray color to all navbar links */
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #d5d5d5 !important;
+        }
+
+        /* On hover, the links will turn white */
+        .navbar-nav li a:hover {
+            color: #fff !important;
+        }
+
+        /* The active link */
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color: #29292c !important;
+        }
+
+        /* Remove border color from the collapsible button */
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+        }
+
+        /* Dropdown */
+        .open .dropdown-toggle {
+            color: #fff;
+            background-color: #555 !important;
+        }
+
+        /* Dropdown links */
+        .dropdown-menu li a {
+            color: #000 !important;
+        }
+
+        /* On hover, the dropdown links will turn red */
+        .dropdown-menu li a:hover {
+            background-color: red !important;
+        }
     </style>
 </head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">CASA</a></li>
+                    <li><a href="#band">BANDA</a></li>
+                    <li><a href="#tour">TOUR</a></li>
+                    <li><a href="#contact">CONTATO</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MAIS
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mercadoria</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Comunicação</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -153,7 +234,7 @@
         </a>
     </div>
     <!-- Container (The Band Section) -->
-    <div class="container text-center">
+    <div id="band" class="container">
         <h3>A BANDA</h3>
         <p>Nós amamos musica!</p>
         <p>Criamos um site de banda fictício. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -204,7 +285,7 @@
     </div>
 
     <div class="bg-1">
-        <div class="container">
+        <div id="tour" class="container">
             <h3 class="text-center">DATAS DA TURNÊ</h3>
             <p class="text-center">Lorem ipsum vamos tocar algumas músicas para você.<br> Lembre-se de reservar seus
                 ingressos!</p>
@@ -283,7 +364,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div id="contact" class="container">
         <h3 class="text-center">Contato</h3>
         <p class="text-center"><em>Amamos nossos fãs!</em></p>
         <div class="row test">
