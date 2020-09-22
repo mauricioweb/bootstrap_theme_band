@@ -99,6 +99,10 @@
         .modal-body {
             padding: 40px 50px;
         }
+
+        .nav-tabs li a {
+            color: #777;
+        }
     </style>
 </head>
 
@@ -256,7 +260,8 @@
                 <div class="modal-body">
                     <form role="form">
                         <div class="form-group">
-                            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Bilhete, Ingressos, $ 23 por pessoa</label>
+                            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Bilhete, Ingressos,
+                                $ 23 por pessoa</label>
                             <input type="number" class="form-control" id="psw" placeholder="Quantos?">
                         </div>
                         <div class="form-group">
@@ -277,6 +282,61 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <h3 class="text-center">Contato</h3>
+        <p class="text-center"><em>Amamos nossos fãs!</em></p>
+        <div class="row test">
+            <div class="col-md-4">
+                <p> Fan? Deixe uma nota.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+                <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comente" rows="5"></textarea>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-center">Do blog</h3>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
+        <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
+        <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h2>Mike Ross, Gerente</h2>
+            <p>Cara, já estamos na estrada há algum tempo. Ansioso por lorem ipsum.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h2>Chandler Bing, guitarrista</h2>
+            <p>Sempre um prazer gente! Espero que você tenha gostado tanto quanto eu. Eu poderia ESTAR ... mais
+                satisfeito?</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h2>Peter Griffin, baixista</h2>
+            <p>Quer dizer, às vezes eu gosto do show, mas outras vezes eu gosto de outras coisas.</p>
+        </div>
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="imagem/map.jpg" style="width:100%">
 
 </body>
 
